@@ -12,7 +12,7 @@ bounds = [(26, -65),(50, -129)]
 map = f.Map(tiles="CartoDB positron")
 map.fit_bounds(bounds)
 
-airport_code = pd.read_csv(fileName, index_col='ident', usecols=['ident', 'coordinates'])
+airport_code = pd.read_csv(fileName, index_col='gps_code', usecols=['gps_code', 'coordinates'])
 
 logbook = pd.read_csv(r'logbook_2020-11-08_00-43-01.csv', skiprows=flightsTable, usecols=[2, 3, 4]).fillna('0')
 
